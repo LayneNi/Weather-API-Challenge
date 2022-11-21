@@ -1,0 +1,23 @@
+.navbar h1{
+    color: aliceblue;
+}
+
+.cityBtn{
+display: flex;
+flex-direction: column;
+}
+
+button:hover {
+    box-shadow: 0 0 5px 5px #888;
+  }
+  
+  button:hover h3 {
+    display: block
+  }
+  
+  
+  button:active {
+    font-size: 120%;
+    box-shadow: 0 0 10px #000 inset;
+  }
+  
