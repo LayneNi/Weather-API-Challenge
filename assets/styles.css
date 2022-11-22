@@ -20,4 +20,24 @@ button:hover {
     font-size: 120%;
     box-shadow: 0 0 10px #000 inset;
   }
-  
+
+  .container-current{
+    background-color: aquamarine;
+   float: right;
+   border: solid black 2px;
+   margin-right: 40px;
+   margin-top: 15px;
+   font-size: large;
+   font-weight: bold;
+
+  }
+  .form-label{
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .container-five-day{
+    float: right;
+    margin-right: 40px;
+    margin-top: 15px;
+   }

@@ -13,8 +13,17 @@
     <nav class="navbar navbar-dark bg-dark d-flex justify-content-center">
         <h1>Weather Dashboard</h1>
     </nav>
+    <div class="container-current col-lg-8">
+        <h2>Current weather:</h2>
+        <h1 id = "city-name"></h1>
+        <p id = "city-temp"></p>
+        <p id = city-data></p>
+    </div>
+    <div class="container-five-day col-lg-8">
+        <p>5 Day Forecast Here</p>
+    </div>
    <section class="city-section col-lg-3 col-md-6 col-sm-12 m-4" >
-    <label for="cityDataList" class="form-label">Search for a City</label>
+    <label for="cityDataList" class="form-label">Search for a City:</label>
 <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
 <button type="button" class="btn searchBtn btn-outline-primary  btn-lg col-lg-12 col-md-12 col-sm-12 ">Search</button>
 <section class = "cityBtn btn-lg col-lg-12 col-md-12 col-sm-12"></section>
@@ -27,8 +36,8 @@
   <option value="Atlanta">
   <option value="Denver">
   <option value="Austin">
-    </section>
 </datalist>
+    </section>
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
