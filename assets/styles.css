@@ -1,7 +1,17 @@
+body{
+  background: rgb(2,0,36);
+  background: linear-gradient(267deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(0,212,255,1) 100%);
+}
+
+
 .navbar h1{
     color: aliceblue;
 }
 
+.searchBtn{
+  color: aliceblue;
+  background-color: rgba(9,9,121,1);
+}
 .cityBtn{
 display: flex;
 flex-direction: column;
@@ -22,7 +32,9 @@ button:hover {
   }
 
   .container-current{
-    background-color: aquamarine;
+    color: black;
+    background: rgb(2,0,36);
+    background: linear-gradient(267deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 16%, rgb(0, 173, 253) 81%);
    float: right;
    border: solid black 2px;
    margin-right: 40px;
@@ -32,8 +44,14 @@ button:hover {
 
   }
   .form-label{
+    color: aliceblue;
     font-size: 25px;
     font-weight: bold;
+  }
+  #five-day-header{
+    color: aliceblue;
+    margin-right: 40px;
+    margin-top: 15px;
   }
 
   .container-five-day{
@@ -41,3 +59,14 @@ button:hover {
     margin-right: 40px;
     margin-top: 15px;
    }
+
+  .current-data{
+    margin-left: 5px;
+  }
+
+  .card{
+    color: aliceblue;
+    background-color:rgba(9,9,121,1);
+    border: 2px solid white;
+    border-radius: 10%;
+  }

@@ -14,15 +14,25 @@
         <h1>Weather Dashboard</h1>
     </nav>
     <div class="container-current col-lg-8">
+        <section class = "current-data">
         <h2>Current weather:</h2>
         <h1 id = "city-name"></h1>
+        <h1 id = "city-date"></h1>
         <p id = "city-temp"></p>
-        <p id = city-data></p>
+        <p id = "city-data"></p>
+        <p id = "city-humidity"></p>
+        <p id = "city-wind"></p>
+    </section>
+    
     </div>
-    <div class="container-five-day col-lg-8">
-        <p>5 Day Forecast Here</p>
+
+    <div class="container-five-day col-lg-8 row gx-4">
+        <section>    
+            <h3 id = "five-day-header">5 Day Forecast:</h3>
+        </section>
     </div>
-   <section class="city-section col-lg-3 col-md-6 col-sm-12 m-4" >
+
+   <section class="city-section col-lg-3 col-md-6 col-sm-12 mx-4" >
     <label for="cityDataList" class="form-label">Search for a City:</label>
 <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
 <button type="button" class="btn searchBtn btn-outline-primary  btn-lg col-lg-12 col-md-12 col-sm-12 ">Search</button>
