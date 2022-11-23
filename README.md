@@ -10,6 +10,7 @@ My motivation for making this project was to learn how to use api's in order to 
 
 Screenshot: 
 
+![Weather-Dashboard-Screenshot](https://user-images.githubusercontent.com/116680523/203472105-973e8ea1-c64d-4399-8697-07bf4be9a129.PNG)
 
 
 Deployed Link: https://layneni.github.io/Weather-API-Challenge/
