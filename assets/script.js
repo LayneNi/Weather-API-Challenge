@@ -30,6 +30,7 @@ function renderStorage() {
     if (savedCityArray.length === 0) {
         return
     }
+    cityBtnEl.empty()
     console.log("Rendering storage")
     for (let i = 0; i < savedCityArray.length; i++) {
         console.log(savedCityArray[i])
@@ -46,11 +47,12 @@ searchBtnEl.on("click", function (event) {
     }
     var search = input.value
     saveToStorage(search)
+    renderStorage()
     coordinates(search)
     input.value = ""
-    cityBtn.textContent = search
-    console.log(cityBtn);
-    cityBtnEl.append(cityBtn)
+    // cityBtn.textContent = search
+    // console.log(cityBtn);
+    // cityBtnEl.append(cityBtn)
 });
 
 
