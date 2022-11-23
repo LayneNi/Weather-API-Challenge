@@ -17,14 +17,25 @@ display: flex;
 flex-direction: column;
 }
 
+.cityBtn button{
+  color: aliceblue;
+background-color: rgba(9,9,121,1);
+border: white solid 2px;
+margin: 5px;
+border-radius: 75%;
+  }
+
 button:hover {
-    box-shadow: 0 0 5px 5px #888;
+    box-shadow: 0 0 6px 6px rgb(192, 190, 190);
   }
   
   button:hover h3 {
     display: block
   }
   
+  .current-data h2{
+    color: aliceblue;
+  }
   
   button:active {
     font-size: 120%;
