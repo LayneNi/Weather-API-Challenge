@@ -11,6 +11,7 @@ body{
 .searchBtn{
   color: aliceblue;
   background-color: rgba(9,9,121,1);
+  border: white solid 1px;
 }
 .cityBtn{
 display: flex;
@@ -22,7 +23,7 @@ flex-direction: column;
 background-color: rgba(9,9,121,1);
 border: white solid 2px;
 margin: 5px;
-border-radius: 75%;
+/* border-radius: 75%; */
   }
 
 button:hover {
@@ -36,7 +37,7 @@ button:hover {
   .current-data h2{
     color: aliceblue;
   }
-  
+
   button:active {
     font-size: 120%;
     box-shadow: 0 0 10px #000 inset;

@@ -12,7 +12,7 @@ var cityTempEl = $("#city-temp")
 var cityDataEl = $("#city-data")
 var cityHumidityEl = $("#city-humidity")
 var cityWindEl = $("#city-wind")
-
+// addign data to local storage
 function saveToStorage(value) {
     var savedCityArray = JSON.parse(localStorage.getItem('cities')) || []
     if (savedCityArray.includes(value)) {
@@ -24,7 +24,7 @@ function saveToStorage(value) {
     savedCityArray.push(value);
     localStorage.setItem("cities", JSON.stringify(savedCityArray))
 }
-
+// getting local storage onto page
 function renderStorage() {
     var savedCityArray = JSON.parse(localStorage.getItem('cities')) || []
     if (savedCityArray.length === 0) {
@@ -38,7 +38,7 @@ function renderStorage() {
         cityBtnEl.append(button)
     }
 }
-
+// search button click event
 searchBtnEl.on("click", function (event) {
     var input = document.querySelector("#exampleDataList")
     if (!input.value) {
@@ -54,7 +54,7 @@ searchBtnEl.on("click", function (event) {
 });
 
 
-
+// gets weather data for 5 day forecast
 function getWeather(location) {
     var { lat } = location
     var { lon } = location
@@ -94,7 +94,7 @@ function getWeather(location) {
             console.error(error)
         })
 }
-
+// collects current weather data
 function getCurrentWeather(location) {
     var { lat } = location
     var { lon } = location
@@ -110,7 +110,7 @@ function getCurrentWeather(location) {
             makeCurrentDayCard(data)
         }) 
     }
-
+// renders current weather data
 function makeCurrentDayCard(data) {
     console.log(data)
     // document.getElementsByClassName('container-current')[0].innerHTML +=
@@ -128,10 +128,15 @@ function makeCurrentDayCard(data) {
     console.log(data);
 }
 
-
+// renders 5 day forecast data
 function makeFiveDayCard(data) {
     console.log(data)
+    // var fiveDayEl = $(".container-five-day")
+    // var iconcode = data.weather[0].icon;
+    // console.log(iconcode);
+    // var iconurl = `${queryURL}//openweathermap.org/img/w/" + iconcode + ".png`
     document.getElementsByClassName('container-five-day')[0].innerHTML +=
+    
         `<div class="col-2 card gx-4 mx-3 p-2">
     <h5>Date: ${data.dt_txt}
     <h5>Temperature: ${data.main.temp + " " + "Degrees"}</h5>
@@ -140,8 +145,10 @@ function makeFiveDayCard(data) {
     <h5>Wind Speed: ${data.wind.speed + " " + "MPH"}</h5>
     </div>
     `
+    // fiveDayEl.append(iconurl)
+ 
 }
-
+// obatains coordinates
 function coordinates(search) {
     var url = `${queryURL}/geo/1.0/direct?q=${search}&limit=5&appid=${APIKey}`
     fetch(url)
@@ -159,8 +166,12 @@ function coordinates(search) {
         .catch(function (error) {
             console.error(error)
         })
+        
+        .catch(function (error) {
+            console.error(error)
+        })
 }
-
+// created city buttons click event
 cityBtnEl.on("click", function (event) {
     console.log("Good");
     var cityBtnValue = $(event.target).text()
