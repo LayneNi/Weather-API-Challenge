@@ -102,6 +102,7 @@ function getCurrentWeather(location) {
     var { lon } = location
     var city = location.name
     var url = `${queryURL}/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${APIKey}`
+    
     fetch(url)
         .then(function (response) {
             return response.json()
@@ -140,11 +141,12 @@ function makeFiveDayCard(data) {
     document.getElementsByClassName('container-five-day')[0].innerHTML +=
     
         `<div class="col-2 card gx-4 mx-3 p-2">
-    <h5>Date: ${data.dt_txt}
+    <h5>Date: ${data.dt_txt}</h5>
     <h5>Temperature: ${data.main.temp + " " + "Degrees"}</h5>
     <h5>Humidity: ${data.main.humidity + "%"}</h5>
     <h5>Conditions: ${data.weather[0].description}</h5>
     <h5>Wind Speed: ${data.wind.speed + " " + "MPH"}</h5>
+    <img src="http://openweathermap.org/img/w/${data.weather[0].icon}.png" id="icon" alt="weather-icon">
     </div>
     `
     // fiveDayEl.append(iconurl)

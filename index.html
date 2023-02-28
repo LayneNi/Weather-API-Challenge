@@ -13,7 +13,9 @@
     <nav class="navbar navbar-dark bg-dark d-flex justify-content-center">
         <h1>Weather Dashboard</h1>
     </nav>
-    <div class="container-current col-lg-8">
+
+    
+    <div class="container-current d-flex col-lg-8">
         <section class = "current-data">
         <h2>Current weather:</h2>
         <h1 id = "city-name"></h1>
@@ -23,20 +25,19 @@
         <p id = "city-humidity"></p>
         <p id = "city-wind"></p>
     </section>
-    
     </div>
 
-    <div class="container-five-day col-lg-8 row gx-4">
+    <div class="container-five-day d-flex col-lg-8 row gx-4">
         <section>    
             <h3 id = "five-day-header">5 Day Forecast:</h3>
         </section>
     </div>
 
-   <section class="city-section col-lg-3 col-md-6 col-sm-12 mx-4" >
+   <div class="city-section col-lg-3 col-md-6 col-sm-12 mx-4" >
     <label for="cityDataList" class="form-label">Search for a City:</label>
 <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
 <button type="button" class="btn searchBtn btn-outline-primary  btn-lg col-lg-12 col-md-12 col-sm-12 ">Search</button>
-<section class = "cityBtn btn-lg col-lg-12 col-md-12 col-sm-12"></section>
+<section class="cityBtn btn-lg col-lg-12 col-md-12 col-sm-12"></section>
 <datalist id="datalistOptions">
   <option value="San Francisco">
   <option value="New York">
@@ -47,10 +48,11 @@
   <option value="Denver">
   <option value="Austin">
 </datalist>
-    </section>
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/script.js"></script>
+    <script src="https://kit.fontawesome.com/8638d0ac87.js" crossorigin="anonymous"></script>
 </body>
 </html>
