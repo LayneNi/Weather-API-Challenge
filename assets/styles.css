@@ -84,11 +84,15 @@ button:hover {
     margin-left: 5px;
   }
 
+.date-box{
+  border-bottom: 2px  solid white;
+}
+
   .card{
     color: aliceblue;
     background-color:rgba(9,9,121,1);
     border: 2px solid white;
-    border-radius: 10%;
+    /* border-radius: 10%; */
     box-shadow: 1px white;
     /* align-items: center; */
   }
@@ -133,6 +137,7 @@ button:hover {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
+      float: left;
     }
 
     .main-box{
@@ -141,5 +146,10 @@ button:hover {
     .card{
       align-items: center;
       width: 90%;
+      margin-bottom: 2%;
+    }
+
+    #five-day-header{
+      float: left;
     }
   }

@@ -141,7 +141,9 @@ function makeFiveDayCard(data) {
     document.getElementsByClassName('container-five-day')[0].innerHTML +=
     
         `<div class="col-2 card gx-4 mx-3 p-2">
+        <div class="date-box">
     <h5>Date: ${data.dt_txt}</h5>
+    </div>
     <h5>Temperature: ${data.main.temp + " " + "Degrees"}</h5>
     <h5>Humidity: ${data.main.humidity + "%"}</h5>
     <h5>Conditions: ${data.weather[0].description}</h5>
