@@ -117,6 +117,8 @@ function getCurrentWeather(location) {
 function makeCurrentDayCard(data) {
     console.log(data)
     console.log("ping");
+    console.log(data.dt_txt);
+    console.log((data.dt_txt).split("-"))
     console.log(Date(data.dt));
     console.log(Date(data.dt).split(" "));
     console.log(Date(data.dt).split(" ")[0]);
@@ -139,15 +141,18 @@ function makeCurrentDayCard(data) {
 // renders 5 day forecast data
 function makeFiveDayCard(data) {
     console.log(data)
+    console.log(data.dt_txt);
+    console.log((data.dt_txt).split("-"))
+    console.log(data.dt_txt.split("-")[2].split(" ")[0])
     // var fiveDayEl = $(".container-five-day")
     // var iconcode = data.weather[0].icon;
     // console.log(iconcode);
     // var iconurl = `${queryURL}//openweathermap.org/img/w/" + iconcode + ".png`
     document.getElementsByClassName('container-five-day')[0].innerHTML +=
-    
+   
         `<div class="col-2 card gx-4 mx-3 p-2">
         <div class="date-box">
-    <h5>Date: ${Date(data.dt).split(" ")[0]},  ${Date(data.dt).split(" ")[1]} ${Date(data.dt).split(" ")[2]} ${Date(data.dt).split(" ")[3]}</h5>
+    <h5>Date: ${data.dt_txt.split("-")[1]}/${data.dt_txt.split("-")[2].split(" ")[0]}/${data.dt_txt.split("-")[0]}</h5>
     </div>
     <h5>Temperature: ${data.main.temp + " " + "Degrees"}</h5>
     <h5>Humidity: ${data.main.humidity + "%"}</h5>
