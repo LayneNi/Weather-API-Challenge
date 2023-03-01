@@ -116,13 +116,6 @@ function getCurrentWeather(location) {
 // renders current weather data
 function makeCurrentDayCard(data) {
     console.log(data)
-    console.log("ping");
-    console.log(data.dt_txt);
-    console.log((data.dt_txt).split("-"))
-    console.log(Date(data.dt));
-    console.log(Date(data.dt).split(" "));
-    console.log(Date(data.dt).split(" ")[0]);
-    console.log("ping");
     // document.getElementsByClassName('container-current')[0].innerHTML +=
     cityTempEl.text("")
     cityTempEl.append("Temperature:", " ", data.main.temp, " ", "Degrees Fahrenheit");
