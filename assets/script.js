@@ -116,6 +116,11 @@ function getCurrentWeather(location) {
 // renders current weather data
 function makeCurrentDayCard(data) {
     console.log(data)
+    console.log("ping");
+    console.log(Date(data.dt));
+    console.log(Date(data.dt).split(" "));
+    console.log(Date(data.dt).split(" ")[0]);
+    console.log("ping");
     // document.getElementsByClassName('container-current')[0].innerHTML +=
     cityTempEl.text("")
     cityTempEl.append("Temperature:", " ", data.main.temp, " ", "Degrees Fahrenheit");
@@ -142,7 +147,7 @@ function makeFiveDayCard(data) {
     
         `<div class="col-2 card gx-4 mx-3 p-2">
         <div class="date-box">
-    <h5>Date: ${data.dt_txt}</h5>
+    <h5>Date: ${Date(data.dt).split(" ")[0]},  ${Date(data.dt).split(" ")[1]} ${Date(data.dt).split(" ")[2]} ${Date(data.dt).split(" ")[3]}</h5>
     </div>
     <h5>Temperature: ${data.main.temp + " " + "Degrees"}</h5>
     <h5>Humidity: ${data.main.humidity + "%"}</h5>
